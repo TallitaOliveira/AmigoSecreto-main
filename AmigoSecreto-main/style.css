@@ -89,8 +89,14 @@ body {
 
 .button-container {
     width: 300px;
-    justify-content: center;
-}
+        display: flex;
+        justify-content: center; /* Centraliza os botões horizontalmente */
+        align-items: center; /* Alinha os botões verticalmente */
+        gap: 15px; /* Espaço entre os botões */
+        margin-top: 20px;
+    }
+    
+
 
 /* Estilos de entrada de texto */
 .input-title {
@@ -142,23 +148,46 @@ ul {
     text-align: center;
 }
 
-/* Botão de sortear título */
-.button-draw {
+/* Estilos para ambos os botões */
+.button-draw, .novoJogo {
     display: flex;
     align-items: center;
-    width: 100%;
-    padding: 10px 40px;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    border-radius: 25px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    padding: 12px 24px;
     color: var(--color-white);
     background-color: var(--color-button);
     font-size: 16px;
+    width: auto; 
+    height: auto; 
+    text-align: center;
+    line-height: normal; 
+}
+
+/* Estilos específicos para o botão de sortear título */
+.button-draw {
+    background-color: var(--color-button);
+}
+
+.button-draw:hover {
+    background-color: var(--color-button-hover);
 }
 
 .button-draw img {
     margin-right: 40px;
 }
 
-.button-draw:hover {
-    background-color: var(--color-button-hover);
+/* Estilos específicos para o botão de novo jogo */
+.novoJogo {
+    background-color: #007bff;
+}
+
+.novoJogo:hover {
+    background-color: #0056b3;
 }
 
 .button-remove {
